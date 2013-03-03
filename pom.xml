@@ -1,18 +1,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.gremlincorp</groupId>
-  <artifactId>dtf</artifactId>
+  <artifactId>doomed-to-fail</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  
-  <modules>
-      <module>dtf-android</module>
-  </modules>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
         <encoding>UTF-8</encoding>
         <scala.version>2.9.1</scala.version>
+        <gdx.version>0.9.9-SNAPSHOT</gdx.version>
+        <gwt.version>2.5.0</gwt.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>gdx-nightlies</id>
+            <url>http://libgdx.badlogicgames.com/nightlies/maven</url>
+        </repository>
+    </repositories>
+    
+    <profiles>
+        <profile>
+            <id>desktop</id>
+            <modules>
+                <module>desktop</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>android</id>
+            <modules>
+                <module>android</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>html</id>
+            <modules>
+                <module>html</module>
+            </modules>
+        </profile>
+    </profiles>
+
+    <modules>
+        <module>core</module>
+    </modules>
 </project>
