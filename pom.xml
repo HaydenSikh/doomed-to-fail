@@ -10,6 +10,7 @@
         <maven.compiler.target>1.6</maven.compiler.target>
         <encoding>UTF-8</encoding>
         <scala.version>2.9.1</scala.version>
+        <scala.plugin.version>2.15.0</scala.plugin.version>
         <gdx.version>0.9.9-SNAPSHOT</gdx.version>
         <gwt.version>2.5.0</gwt.version>
     </properties>
@@ -20,6 +21,19 @@
             <url>http://libgdx.badlogicgames.com/nightlies/maven</url>
         </repository>
     </repositories>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.scala-tools</groupId>
+                    <artifactId>maven-scala-plugin</artifactId>
+                    <version>${scala.plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
     
     <profiles>
         <profile>
