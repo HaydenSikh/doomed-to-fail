@@ -37,5 +37,7 @@ build.log
 #  syntax: regexp
 #  ^\.pc/
 
-#SHITTY output not in target directory
+#output not in target directory
 build.log
+/.worksheet
+/.cache
